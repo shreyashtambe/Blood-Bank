@@ -1,0 +1,36 @@
+<h3><a class="btn btn-secondary" href="/employee"><i class="fa fa-plus"></i> Donate</a> Donor List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+             <th>Name</th>
+            <th>Blood-Group</th>
+            <th>Donated Amount</th>
+            <th>Date</th>
+            <th>Address Details</th>
+            <th>Age-Gender</th>
+            <th>Phone no</th>
+            {{!-- <th>Blood Group</th>
+            <th>Amount Available</th> --}}
+        </tr>
+    </thead>
+    <tbody>
+       
+        
+        {{#each list}}
+        <tr>
+            <td>{{this.Name}}</td>
+            <td>{{this.Description}}</td>
+            <td>{{this.Completed}}</td>
+            <td>{{this.Date}}</td>
+            <td>{{this.Time}}</td>
+            <td>{{this.AgeGender}}</td>
+            <td>{{this.no}}</td>
+
+            <td>
+                <a href="/employee/{{this._id}}" ><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/employee/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr> 
+        {{/each}}
+    </tbody>
+</table>
